@@ -9,6 +9,7 @@ import {
   SpotLight,
   useDepthBuffer,
   Sphere,
+  useVideoTexture,
 } from "@react-three/drei";
 import { useSpring } from "@react-spring/core";
 import { a as three } from "@react-spring/three";
@@ -86,6 +87,9 @@ function Model({ open, hinge, ...props }) {
             material={materials["screen.001"]}
             geometry={nodes["Cube008_2"].geometry}
           />
+          <mesh geometry={nodes["Cube008_2"].geometry}>
+            <VideoMaterial url={"video.mp4"} />
+          </mesh>
         </group>
       </three.group>
       <mesh
@@ -110,6 +114,10 @@ function Model({ open, hinge, ...props }) {
       />
     </group>
   );
+}
+function VideoMaterial({ url }) {
+  const texture = useVideoTexture(url);
+  return <meshBasicMaterial map={texture} toneMapped={false} />;
 }
 
 function MovingSpot({ vec = new Vector3(), ...props }) {
