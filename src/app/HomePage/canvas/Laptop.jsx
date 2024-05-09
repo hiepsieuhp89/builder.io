@@ -59,8 +59,21 @@ function Model({ open, hinge, ...props }) {
       onPointerOut={(e) => setHovered(false)}
       dispose={null}
     >
+      {console.log("materials", materials)}
+      {console.log("nodes", nodes)}
       <three.group rotation-x={hinge} position={[0, -0.04, 0.41]}>
         <group position={[0, 2.96, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
+          <mesh
+            material={materials["1976logo"]}
+            geometry={nodes["logo"].geometry}
+            position={[
+              -0.008667165413498878, -0.17309677600860596, 0.7195109128952026,
+            ]}
+            rotation={[
+              1.5669386850871616, -4.3542756229220016e-8, 3.1415926098787423,
+            ]}
+            scale={[0.4, 0.4, 0.4]}
+          />
           <mesh
             material={materials.aluminium}
             geometry={nodes["Cube008"].geometry}
