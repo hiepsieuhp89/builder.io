@@ -7,6 +7,10 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+import php from "./tech/php.png";
+import laravel from "./tech/laravel.png";
+import csharp from "./tech/csharp.png";
+
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -31,11 +35,20 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
+import fpsunity from "./fpsunity.png";
+import supercore from "./supercore.png";
+import okchoi from "./okchoi.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
+  php,
+  laravel,
+  csharp,
+  fpsunity,
+  supercore,
+  okchoi,
   okvip,
   vccorp,
   navisoft,
