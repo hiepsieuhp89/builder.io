@@ -150,9 +150,9 @@ const LaptopCanvas = () => {
         intensity={1}
         color={props.open.to([0, 1], ["#f0f0f0", "#35211e"])}
       />
-      <Sphere position={[9.5, 5.5, 0.41]} args={[0.08, 64, 64]}>
+      {/* <Sphere position={[9.5, 5.5, 0.41]} args={[0.08, 64, 64]}>
         <meshBasicMaterial color={[212, 103, 69]} toneMapped={false} />
-      </Sphere>
+      </Sphere> */}
       <group
         rotation={[0, Math.PI, 0]}
         onClick={(e) => (e.stopPropagation(), setOpen(!open))}
@@ -167,9 +167,9 @@ const LaptopCanvas = () => {
         blur={1.75}
         far={4.5}
       />
-      <EffectComposer>
+      {/* <EffectComposer>
         <Bloom mipmapBlur luminanceThreshold={1} radius={0.7} />
-      </EffectComposer>
+      </EffectComposer> */}
     </Canvas>
   );
 };

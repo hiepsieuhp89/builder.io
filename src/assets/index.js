@@ -21,6 +21,11 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
+import okvip from "./company/okvip.png";
+import vccorp from "./company/vccorp.png";
+import navisoft from "./company/navisoft.png";
+import dft from "./company/dft.png";
+import mobifone from "./company/mobifone.png";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
@@ -31,6 +36,11 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
+  okvip,
+  vccorp,
+  navisoft,
+  dft,
+  mobifone,
   logo,
   backend,
   creator,

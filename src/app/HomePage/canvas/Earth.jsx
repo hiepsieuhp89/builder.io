@@ -102,9 +102,9 @@ const EarthCanvas = () => {
           minPolarAngle={Math.PI / 2}
         />
         <Earth />
-        <EffectComposer>
+        {/* <EffectComposer>
           <Bloom mipmapBlur luminanceThreshold={1} radius={0.7} />
-        </EffectComposer>
+        </EffectComposer> */}
         <Preload all />
       </Suspense>
     </Canvas>

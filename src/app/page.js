@@ -15,7 +15,7 @@ import {
 
 export default function Home() {
   return (
-    // <BrowserRouter>
+    <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
@@ -31,6 +31,6 @@ export default function Home() {
           <StarsCanvas />
         </div>
       </div>
-    // </BrowserRouter>
+    </BrowserRouter>
   );
 }
