@@ -1,5 +1,5 @@
 "use client";
-import "../index.css";
+import "../../index.css";
 import { BrowserRouter } from "react-router-dom";
 import {
   About,
@@ -11,11 +11,10 @@ import {
   Tech,
   Works,
   StarsCanvas,
-} from "./HomePage/index";
+} from "../HomePage/index";
 
-export default function Home() {
+function Home() {
   return (
-    // <BrowserRouter>
     <div className="relative z-0 bg-primary">
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <Navbar />
@@ -31,6 +30,6 @@ export default function Home() {
         <StarsCanvas />
       </div>
     </div>
-    // </BrowserRouter>
   );
 }
+export default Home;

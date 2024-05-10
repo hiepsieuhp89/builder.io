@@ -1,17 +1,45 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // import { Link } from "react-router-dom";
 
 import { styles } from "../../styles";
 import { navLinks } from "../../constants";
-import { menu, close } from "@/assets";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { menu, close } from "@assets";
+import { motion, useCycle, useScroll, useSpring } from "framer-motion";
+import ToggleLang from "./components/ToggleLang";
+import { useDimensions } from "@/hooks/use-dimensions";
+
+const sidebar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 87.6% 61%)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2,
+    },
+  }),
+  closed: {
+    clipPath: "circle(30px at 87.6% 61%)",
+    transition: {
+      delay: 0.5,
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { scrollYProgress } = useScroll();
+
+  //mobile
+  // const [isOpen, toggleOpen] = useCycle(false, true);
+  // const containerRef = useRef(null);
+  // const { height } = useDimensions(containerRef);
+
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -42,14 +70,6 @@ const Navbar = () => {
         }`}
       >
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-          {/* <Link
-          to='/'
-          className='flex items-center gap-2'
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        > */}
           <a className="flex">
             {/* <img src={logo.src} alt="logo" className="w-9 h-9 object-contain" /> */}
             <p className="text-white text-[18px] font-bold cursor-pointer flex ">
@@ -57,7 +77,6 @@ const Navbar = () => {
               <span className="sm:block hidden"> | JavaScript Developer</span>
             </p>
           </a>
-          {/* </Link> */}
 
           <ul className="list-none hidden sm:flex flex-row gap-10">
             {navLinks.map((nav) => (
@@ -71,44 +90,109 @@ const Navbar = () => {
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
+            {/* <ToggleLang /> */}
           </ul>
-
-          <div className="sm:hidden flex flex-1 justify-end items-center">
-            <img
-              src={toggle ? close.src : menu.src}
-              alt="menu"
-              className="w-[28px] h-[28px] object-contain"
-              onClick={() => setToggle(!toggle)}
-            />
-
-            <div
-              className={`${
-                !toggle ? "hidden" : "flex"
-              } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-            >
-              <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-                {navLinks.map((nav) => (
-                  <li
-                    key={nav.id}
-                    className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                      active === nav.title ? "text-white" : "text-secondary"
-                    }`}
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setActive(nav.title);
-                    }}
-                  >
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
         </div>
-        {/* <ToggleLang /> */}
         <motion.div className="progress-bar" style={{ scaleX }} />
       </nav>
+      {/* <motion.nav
+        className="mobile-nav"
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        custom={height}
+        ref={containerRef}
+      >
+        <motion.div className="background" variants={sidebar} />
+        <Navigation />
+        <MenuToggle toggle={() => toggleOpen()} />
+      </motion.nav> */}
     </React.Fragment>
+  );
+};
+const MenuItem = ({ i }) => {
+  const variants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 },
+      },
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 },
+      },
+    },
+  };
+
+  const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
+
+  const style = { border: `2px solid ${colors[i]}` };
+  return (
+    <motion.li
+      variants={variants}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <div className="icon-placeholder" style={style} />
+      <div className="text-placeholder" style={style} />
+    </motion.li>
+  );
+};
+const Navigation = () => {
+  const variants = {
+    open: {
+      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    },
+    closed: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+  return (
+    <motion.ul variants={variants}>
+      {[0, 1, 2, 3, 4].map((i) => (
+        <MenuItem i={i} key={i} />
+      ))}
+    </motion.ul>
+  );
+};
+const MenuToggle = ({ toggle }) => {
+  const Path = (props) => (
+    <motion.path
+      fill="transparent"
+      strokeWidth="3"
+      stroke="hsl(0, 0%, 18%)"
+      strokeLinecap="round"
+      {...props}
+    />
+  );
+  return (
+    <button onClick={toggle}>
+      <svg width="23" height="23" viewBox="0 0 23 23">
+        <Path
+          variants={{
+            closed: { d: "M 2 2.5 L 20 2.5" },
+            open: { d: "M 3 16.5 L 17 2.5" },
+          }}
+        />
+        <Path
+          d="M 2 9.423 L 20 9.423"
+          variants={{
+            closed: { opacity: 1 },
+            open: { opacity: 0 },
+          }}
+          transition={{ duration: 0.1 }}
+        />
+        <Path
+          variants={{
+            closed: { d: "M 2 16.346 L 20 16.346" },
+            open: { d: "M 3 2.5 L 17 16.346" },
+          }}
+        />
+      </svg>
+    </button>
   );
 };
 
