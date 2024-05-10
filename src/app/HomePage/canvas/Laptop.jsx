@@ -83,10 +83,10 @@ function Model({ open, hinge, ...props }) {
             material={materials["matte.001"]}
             geometry={nodes["Cube008_1"].geometry}
           />
-          <mesh
+          {/* <mesh
             material={materials["screen.001"]}
             geometry={nodes["Cube008_2"].geometry}
-          />
+          /> */}
           <mesh geometry={nodes["Cube008_2"].geometry}>
             <VideoMaterial url={"video.mp4"} />
           </mesh>
