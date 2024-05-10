@@ -60,8 +60,8 @@ function Model({ open, hinge, ...props }) {
       onPointerOut={(e) => setHovered(false)}
       dispose={null}
     >
-      {console.log("materials", materials)}
-      {console.log("nodes", nodes)}
+      {/* {console.log("materials", materials)}
+      {console.log("nodes", nodes)} */}
       <three.group rotation-x={hinge} position={[0, -0.04, 0.41]}>
         <group position={[0, 2.96, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
           <mesh

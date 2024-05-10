@@ -180,6 +180,16 @@ html {
 .about .card-container img {
   max-height: 100%;
 }
+.progress-bar {
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #d46745;
+  transform-origin: 0%;
+}
 
 @keyframes mulShdSpin {
   0%,
