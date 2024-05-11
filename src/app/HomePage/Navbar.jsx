@@ -34,7 +34,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { scrollYProgress } = useScroll();
-
+  const [counter, setCounter] = useState(0);
   //mobile
   // const [isOpen, toggleOpen] = useCycle(false, true);
   // const containerRef = useRef(null);
@@ -73,7 +73,7 @@ const Navbar = () => {
           <a className="flex">
             {/* <img src={logo.src} alt="logo" className="w-9 h-9 object-contain" /> */}
             <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-              Tung &nbsp;
+              Tng &nbsp;
               <span className="sm:block hidden"> | JavaScript Developer</span>
             </p>
           </a>

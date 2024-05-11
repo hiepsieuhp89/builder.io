@@ -33,7 +33,7 @@ import {
   fpsunity,
   csharp,
   php,
-  laravel
+  laravel,
 } from "../assets";
 
 export const navLinks = [
@@ -50,7 +50,8 @@ export const navLinks = [
     title: "Contact",
   },
 ];
-
+const overview =
+  "I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!";
 const services = [
   {
     title: "Web Developer",
@@ -235,8 +236,7 @@ const testimonials = [
 const projects = [
   {
     name: "SSI Supercore",
-    description:
-      `A Web application contains BO and FO, BO to manage customer, staffs, securities, stock
+    description: `A Web application contains BO and FO, BO to manage customer, staffs, securities, stock
       depository transactions, money exchanges, money transfers, FO to send and get orders
       messages, place buy and sell orders,...`,
     tags: [
@@ -262,8 +262,7 @@ const projects = [
   },
   {
     name: "Unity 3d Games",
-    description:
-      `A Web app allows users to manage their favorite football teams, leagues, watch live
+    description: `A Web app allows users to manage their favorite football teams, leagues, watch live
       match, chating in match room`,
     tags: [
       {
@@ -284,8 +283,7 @@ const projects = [
   },
   {
     name: "OkChoi - Sport Live",
-    description:
-      `A Web app allows users to manage their favorite football teams, leagues, watch live
+    description: `A Web app allows users to manage their favorite football teams, leagues, watch live
       match, chating in match room`,
     tags: [
       {
@@ -306,4 +304,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { overview, services, technologies, experiences, testimonials, projects };
