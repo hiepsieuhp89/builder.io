@@ -9,10 +9,9 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../../styles";
-import { experiences } from "../../constants";
+import { useConstants } from "../../constants";
 import { SectionWrapper } from "../../hoc";
 import { textVariant } from "../../utils/motion";
-import Image from "next/image";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -73,7 +72,7 @@ const Experience = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline lineColor="">
-          {experiences.map((experience, index) => (
+          {useConstants().experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}

@@ -154,6 +154,16 @@ function MovingSpot({ vec = new Vector3(), ...props }) {
 const LaptopCanvas = () => {
   // This flag controls open state, alternates between true & false
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    let event = setTimeout(() => {
+      if (!open) setOpen(true);
+    }, 1500);
+
+    return () => {
+      clearTimeout(event);
+    };
+  }, []);
+
   // We turn this into a spring animation that interpolates between 0 and 1
   const props = useSpring({ open: Number(open) });
   return (

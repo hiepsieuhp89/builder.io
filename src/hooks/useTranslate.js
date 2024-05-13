@@ -1,6 +1,6 @@
-import { getIntl } from "next-intl";
+import { useTranslations } from "next-intl";
 
-export const useTranslate = (id) => {
-  const intl = getIntl();
-  return intl.formatMessage({ id });
+export const useTranslate = (section, name) => {
+  const t = useTranslations(section);
+  return t(name);
 };

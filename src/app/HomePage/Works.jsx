@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { github } from "../../assets";
 import { SectionWrapper } from "../../hoc";
-import { projects } from "../../constants";
+import { useConstants } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { Tilt } from "react-tilt";
 import Image from "next/image";
@@ -90,7 +90,7 @@ const Works = () => {
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
+        {useConstants().projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>

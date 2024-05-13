@@ -2,12 +2,12 @@ import React from "react";
 import { motion, Variants } from "framer-motion";
 import { BallCanvas } from "./canvas";
 import { SectionWrapper } from "../../hoc";
-import { technologies } from "../../constants";
+import { useConstants } from "../../constants";
 
 const Tech = () => {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10 about">
-      {technologies.map((technology) => (
+      {useConstants().technologies.map((technology) => (
         <motion.div
           key={technology.name}
           className="card-container"
