@@ -156,8 +156,8 @@ const useConstants = () => {
         ],
       },
       {
-        title: "Fullstack Developer",
-        company_name: "DFT JSC",
+        title: "Backend Developer",
+        company_name: "FPT Software",
         icon: dft,
         iconBg: "#E6DEDD",
         date: "May 2021 - December 2022",
