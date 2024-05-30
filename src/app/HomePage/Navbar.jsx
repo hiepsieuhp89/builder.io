@@ -1,13 +1,10 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 
-import { styles } from "../../styles";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { navLinks } from "../../constants";
-import { menu, close } from "@assets";
-import { motion, useCycle, useScroll, useSpring } from "framer-motion";
-import ToggleLang from "./components/ToggleLang";
-import { useDimensions } from "@/hooks/use-dimensions";
+import { styles } from "../../styles";
 
 const sidebar = {
   open: (height = 1000) => ({
