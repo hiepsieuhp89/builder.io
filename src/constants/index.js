@@ -274,8 +274,9 @@ const useConstants = () => {
             color: "green-text-gradient",
           },
         ],
-        image: supercore,
+        image: challengr,
         source_code_link: "https://github.com/",
+        web_link: "https://next-staging.challengr.be/"
       },
       {
         name: "SSI Supercore",
@@ -302,6 +303,7 @@ const useConstants = () => {
         ],
         image: supercore,
         source_code_link: "https://github.com/",
+        web_link: "https://iboard.ssi.com.vn/"
       },
       {
         name: "Unity 3d Games",
@@ -344,6 +346,7 @@ const useConstants = () => {
         ],
         image: okchoi,
         source_code_link: "https://github.com/",
+        web_link: "https://dev.banhgio88.com/",
       },
     ],
   };
