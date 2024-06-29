@@ -64,7 +64,7 @@ const useConstants = () => {
         icon: web,
       },
       {
-        title: "ReactJs Developer",
+        title: "React/Next Developer",
         icon: mobile,
       },
       {
@@ -103,7 +103,7 @@ const useConstants = () => {
         icon: typescript,
       },
       {
-        name: "React JS",
+        name: "React",
         icon: reactjs,
       },
       {
@@ -276,7 +276,7 @@ const useConstants = () => {
         ],
         image: challengr,
         source_code_link: "https://github.com/",
-        web_link: "https://next-staging.challengr.be/"
+        web_link: "https://next-staging.challengr.be/",
       },
       {
         name: "SSI Supercore",
@@ -303,7 +303,7 @@ const useConstants = () => {
         ],
         image: supercore,
         source_code_link: "https://github.com/",
-        web_link: "https://iboard.ssi.com.vn/"
+        web_link: "https://iboard.ssi.com.vn/",
       },
       {
         name: "Unity 3d Games",
