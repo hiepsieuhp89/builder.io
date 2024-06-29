@@ -29,6 +29,8 @@ import okvip from "./company/okvip.png";
 import vccorp from "./company/vccorp.png";
 import navisoft from "./company/navisoft.png";
 import dft from "./company/dft.png";
+import fpt from "./company/fpt.png";
+import vitex from "./company/vitex.png";
 import mobifone from "./company/mobifone.png";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -37,6 +39,7 @@ import tesla from "./company/tesla.png";
 
 import fpsunity from "./fpsunity.png";
 import supercore from "./supercore.png";
+import challengr from "./challengr.png";
 import okchoi from "./okchoi.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -48,11 +51,14 @@ export {
   csharp,
   fpsunity,
   supercore,
+  challengr,
   okchoi,
   okvip,
   vccorp,
   navisoft,
   dft,
+  vitex,
+  fpt,
   mobifone,
   logo,
   backend,

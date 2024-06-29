@@ -25,11 +25,14 @@ import {
   threejs,
   mobifone,
   dft,
+  fpt,
+  vitex,
   navisoft,
   vccorp,
   okvip,
   okchoi,
   supercore,
+  challengr,
   fpsunity,
   csharp,
   php,
@@ -158,7 +161,7 @@ const useConstants = () => {
       {
         title: "Backend Developer",
         company_name: "FPT Software",
-        icon: dft,
+        icon: fpt,
         iconBg: "#E6DEDD",
         date: "May 2021 - December 2022",
         points: [
@@ -207,6 +210,19 @@ const useConstants = () => {
           "Develop CMS API, Client Api, Chatting Realtime Handling",
         ],
       },
+      {
+        title: "Fullstack Developer",
+        company_name: "Vitex",
+        icon: vitex,
+        iconBg: "#E6DEDD",
+        date: "Mar 2024 - Now",
+        points: [
+          "Develop and build web apps, mobile apps, Authentications, CMS client and web client for sport streaming website",
+          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+          "Implementing responsive design and ensuring cross-browser compatibility.",
+          "Develop app components, apis, mail handling",
+        ],
+      },
     ],
 
     testimonials: [
@@ -237,6 +253,30 @@ const useConstants = () => {
     ],
 
     projects: [
+      {
+        name: "Challengr",
+        description: `A Web/mobile app based on old strava location tracking which allow user to share and start sport challenges, share their post, a social network for sports and company teams to track their activities process... `,
+        tags: [
+          {
+            name: "react",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "c#",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "tailwindcss",
+            color: "pink-text-gradient",
+          },
+          {
+            name: "laravel",
+            color: "green-text-gradient",
+          },
+        ],
+        image: supercore,
+        source_code_link: "https://github.com/",
+      },
       {
         name: "SSI Supercore",
         description: `A Web application contains BO and FO, BO to manage customer, staffs, securities, stock
