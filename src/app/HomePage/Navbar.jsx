@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useConstants } from "../../constants";
 import { styles } from "../../styles";
-import ToggleLang from "./components/ToggleLang";
+import LangSwitcher from "./components/LangSwitcher";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -69,7 +69,7 @@ const Navbar = () => {
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
-            <ToggleLang />
+            <LangSwitcher />
           </ul>
         </div>
         <motion.div className="progress-bar" style={{ scaleX }} />

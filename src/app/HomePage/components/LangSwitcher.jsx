@@ -6,7 +6,7 @@ import { useRouter, usePathname } from "@/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
-const ToggleLang = (_props) => {
+const LangSwitcher = (_props) => {
   const t = useTranslations("IndexPage");
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -20,7 +20,7 @@ const ToggleLang = (_props) => {
     damping: 30,
   };
 
-  const handleToggleLanguage = () => {
+  const handleLangSwitcheruage = () => {
     const nextLocale = locale == "vi" ? "en" : "vi";
 
     startTransition(() => {
@@ -38,7 +38,7 @@ const ToggleLang = (_props) => {
       <div
         className="switch"
         data-isOn={locale == "vi"}
-        onClick={handleToggleLanguage}
+        onClick={handleLangSwitcheruage}
       >
         <motion.div className="handle" layout transition={spring}>
           {locale == "vi" ? (
@@ -52,4 +52,4 @@ const ToggleLang = (_props) => {
   );
 };
 
-export default ToggleLang;
+export default LangSwitcher;
