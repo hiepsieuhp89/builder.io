@@ -40,39 +40,45 @@ import {
 } from "../assets";
 import { useTranslations } from "next-intl";
 
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
-];
+const useNavLinks = () => {
+  const t = useTranslations("navLinks");
+  return [
+    {
+      id: "about",
+      title: t("about"),
+    },
+    {
+      id: "work",
+      title: t("work"),
+    },
+    {
+      id: "contact",
+      title: t("contact"),
+    },
+  ];
+};
+
 const useConstants = () => {
   const t = useTranslations("Index");
+  const navLinks = useNavLinks();
   return {
+    navLinks,
     overview: t("overview"),
     services: [
       {
-        title: "Web Developer",
+        title: t("web_developer"),
         icon: web,
       },
       {
-        title: "React/Next Developer",
+        title: t("react_next_developer"),
         icon: mobile,
       },
       {
-        title: "Backend Developer",
+        title: t("backend_developer"),
         icon: backend,
       },
       {
-        title: "Model Designer",
+        title: t("model_designer"),
         icon: creator,
       },
     ],
@@ -146,107 +152,104 @@ const useConstants = () => {
 
     experiences: [
       {
-        title: "Web Developer",
+        title: t("web_developer"),
         company_name: "Haedap JSC/Mobifone",
         icon: mobifone,
         iconBg: "#383E56",
-        date: "April 2021 - April 2022",
+        date: t("april_2021_april_2022"),
         points: [
-          "Develop web application, build app structure by admin panel framework Laravel Admin",
-          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-          "Implementing responsive design and ensuring cross-browser compatibility.",
-          "Participating in code reviews and providing constructive feedback to other developers.",
+          t("develop_web_application"),
+          t("collaborating_with_cross_functional_teams"),
+          t("implementing_responsive_design"),
+          t("participating_in_code_reviews"),
         ],
       },
       {
-        title: "Backend Developer",
+        title: t("backend_developer"),
         company_name: "FPT Software",
         icon: fpt,
         iconBg: "#E6DEDD",
-        date: "May 2021 - December 2022",
+        date: t("may_2021_december_2022"),
         points: [
-          "Developing and maintaining web applications using React.js and other related technologies.",
-          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-          "Implementing apis service using c# .NET framework",
-          "Maintain mobile apps based on angular 2, modify themes, layouts, build new pages...",
+          t("developing_and_maintaining_web_applications"),
+          t("collaborating_with_cross_functional_teams"),
+          t("implementing_apis_service"),
+          t("maintain_mobile_apps"),
         ],
       },
       {
-        title: "Fullstack Developer",
+        title: t("fullstack_developer"),
         company_name: "NaviSoft",
         icon: navisoft,
         iconBg: "#383E56",
-        date: "May 2022 - Nov 2023",
+        date: t("may_2022_nov_2023"),
         points: [
-          "Write code and develop Web application for DEPOSITORY AND SURVEILLANCE BANK SOLUTION",
-          "Providing software services and solutions in securities, banking and financial sectors",
-          "Build and maintain Financial Front Office web app and Back Office app",
-          "Handling customer requests and requirements- Optimize database, code convention.",
+          t("write_code_and_develop_web_application"),
+          t("providing_software_services"),
+          t("build_and_maintain_financial_front_office"),
+          t("handling_customer_requests"),
         ],
       },
       {
-        title: "Frontend Developer",
+        title: t("frontend_developer"),
         company_name: "VCCorp",
         icon: vccorp,
         iconBg: "#E6DEDD",
-        date: "Nov 2023 - Mar 2024",
+        date: t("nov_2023_mar_2024"),
         points: [
-          "Develop IMS, site editor, build app structure, config SEO contents, analyze and optimize codes and flows",
-          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-          "Implementing responsive design and ensuring cross-browser compatibility.",
-          "Build and develop Site Editor.",
+          t("develop_ims_site_editor"),
+          t("collaborating_with_cross_functional_teams"),
+          t("implementing_responsive_design"),
+          t("build_and_develop_site_editor"),
         ],
       },
       {
-        title: "Backend Developer",
+        title: t("backend_developer"),
         company_name: "Okvip",
         icon: okvip,
         iconBg: "#E6DEDD",
-        date: "Nov 2023 - Mar 2024",
+        date: t("nov_2023_mar_2024"),
         points: [
-          "Develop and build Authentications, CMS client and web client for sport streaming website",
-          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-          "Implementing responsive design and ensuring cross-browser compatibility.",
-          "Develop CMS API, Client Api, Chatting Realtime Handling",
+          t("develop_and_build_authentications"),
+          t("collaborating_with_cross_functional_teams"),
+          t("implementing_responsive_design"),
+          t("develop_cms_api"),
         ],
       },
       {
-        title: "Fullstack Developer",
+        title: t("fullstack_developer"),
         company_name: "Vitex",
         icon: vitex,
         iconBg: "#E6DEDD",
-        date: "Mar 2024 - Now",
+        date: t("mar_2024_now"),
         points: [
-          "Develop and build web apps, mobile apps, Authentications, CMS client and web client for sport streaming website",
-          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-          "Implementing responsive design and ensuring cross-browser compatibility.",
-          "Develop app components, apis, mail handling",
+          t("develop_and_build_web_apps"),
+          t("collaborating_with_cross_functional_teams"),
+          t("implementing_responsive_design"),
+          t("develop_app_components"),
         ],
       },
     ],
 
     testimonials: [
       {
-        testimonial:
-          "You're the MVP of teamwork—like a glue that holds us together, always there with a helping hand and a smile.",
+        testimonial: t("mvp_of_teamwork"),
         name: "Minh",
-        designation: "Designer",
+        designation: t("designer"),
         company: "NaviSoft",
         image: "https://randomuser.me/api/portraits/women/4.jpg",
       },
       {
-        testimonial:
-          "You're the lone wolf of productivity—fearless, self-reliant, and blazing your trail through challenges with ease.",
+        testimonial: t("lone_wolf_of_productivity"),
         name: "Ha",
-        designation: "Tester",
+        designation: t("tester"),
         company: "Dft",
         image: "https://randomuser.me/api/portraits/men/5.jpg",
       },
       {
-        testimonial:
-          "You're the after-hours hero of the project—always there, full of energy, and ready to save the day!",
+        testimonial: t("after_hours_hero"),
         name: "Phuong",
-        designation: "BA",
+        designation: t("ba"),
         company: "Navisoft",
         image: "https://randomuser.me/api/portraits/women/6.jpg",
       },
@@ -255,7 +258,7 @@ const useConstants = () => {
     projects: [
       {
         name: "Challengr",
-        description: `A Web/mobile app based on old strava location tracking which allow user to share and start sport challenges, share their post, a social network for sports and company teams to track their activities process... `,
+        description: t("challengr_description"),
         tags: [
           {
             name: "react",
@@ -280,9 +283,7 @@ const useConstants = () => {
       },
       {
         name: "SSI Supercore",
-        description: `A Web application contains BO and FO, BO to manage customer, staffs, securities, stock
-        depository transactions, money exchanges, money transfers, FO to send and get orders
-        messages, place buy and sell orders,...`,
+        description: t("ssi_supercore_description"),
         tags: [
           {
             name: "react",
@@ -307,8 +308,7 @@ const useConstants = () => {
       },
       {
         name: "Unity 3d Games",
-        description: `A Web app allows users to manage their favorite football teams, leagues, watch live
-        match, chating in match room`,
+        description: t("unity_3d_games_description"),
         tags: [
           {
             name: "unity",
@@ -328,8 +328,7 @@ const useConstants = () => {
       },
       {
         name: "OkChoi - Sport Live",
-        description: `A Web app allows users to manage their favorite football teams, leagues, watch live
-        match, chating in match room`,
+        description: t("okchoi_sport_live_description"),
         tags: [
           {
             name: "reactjs",

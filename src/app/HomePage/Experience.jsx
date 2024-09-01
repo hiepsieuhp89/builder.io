@@ -12,6 +12,7 @@ import { styles } from "../../styles";
 import { useConstants } from "../../constants";
 import { SectionWrapper } from "../../hoc";
 import { textVariant } from "../../utils/motion";
+import { useTranslations } from "next-intl";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -59,14 +60,15 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const t = useTranslations("Index"); // Initialize the 
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
+          {t("whatIHaveDoneSoFar")}
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+          {t("workExperience")}
         </h2>
       </motion.div>
 

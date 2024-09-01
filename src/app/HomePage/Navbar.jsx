@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 
 import { motion, useScroll, useSpring } from "framer-motion";
-import { navLinks } from "../../constants";
+import { useConstants } from "../../constants";
 import { styles } from "../../styles";
+import ToggleLang from "./components/ToggleLang";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -32,6 +33,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { scrollYProgress } = useScroll();
   const [counter, setCounter] = useState(0);
+  const constant = useConstants();
   //mobile
   // const [isOpen, toggleOpen] = useCycle(false, true);
   // const containerRef = useRef(null);
@@ -76,7 +78,7 @@ const Navbar = () => {
           </a>
 
           <ul className="list-none hidden sm:flex flex-row gap-10">
-            {navLinks.map((nav) => (
+            {constant.navLinks?.map((nav) => (
               <li
                 key={nav.id}
                 className={`${
@@ -87,7 +89,7 @@ const Navbar = () => {
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
-            {/* <ToggleLang /> */}
+            <ToggleLang />
           </ul>
         </div>
         <motion.div className="progress-bar" style={{ scaleX }} />
