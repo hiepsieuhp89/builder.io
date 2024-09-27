@@ -1,14 +1,16 @@
 {
   "Hero": {
-    "hero1": "Tng là một chuyên gia có kinh nghiệm đáng kinh ngạc trong việc phát triển giao diện người dùng và ứng dụng web.",
+    "hero1": "Maverick Can là một chuyên gia có kinh nghiệm đáng kinh ngạc trong việc phát triển giao diện người dùng và ứng dụng web.",
     "hero2": "Anh ấy cũng cung cấp dịch vụ huấn luyện để giúp người khác phát triển kỹ năng.",
-    "hero3": "Sự kết hợp giữa chuyên môn và sự hướng dẫn khiến cho Tng là lựa chọn lý tưởng cho các dự án phát triển"
+    "hero3": "Sự kết hợp giữa chuyên môn và sự hướng dẫn khiến cho Maverick Can là lựa chọn lý tưởng cho các dự án phát triển"
   },
   "Title": {
     "What I have done so far": "Những gì tôi đã làm cho đến nay",
     "workExperience": "Kinh nghiệm làm việc",
     "introduction": "Giới thiệu",
-    "overview": "Tng là ai",
+    "Real Estate Listings": "Bất động sản",
+    "Real Estate Listings Description": "Bất động sản nguồn từ Thien Khoi Group",
+    "overview": "Maverick Can là ai",
     "myWork": "Công việc của tôi",
     "projects": "Các dự án.",
     "WHAT OTHERS SAY": "Những gì người khác nói",
@@ -19,7 +21,8 @@
   "navLinks": {
     "about": "Về",
     "work": "Công việc",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "Real Estate Listings": "Bất động sản"
   },
   "Index": {
     "overview": "Tôi là một nhà phát triển phần mềm có kỹ năng với kinh nghiệm về TypeScript và JavaScript, và chuyên môn về các khung như React, Node.js và Three.js. Tôi học nhanh và hợp tác chặt chẽ với khách hàng để tạo ra các giải pháp hiệu quả, có thể mở rộng và thân thiện với người dùng để giải quyết các vấn đề thực tế. Hãy cùng làm việc để biến ý tưởng của bạn thành hiện thực!",

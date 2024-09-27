@@ -52,8 +52,8 @@ const Navbar = () => {
           <a className="flex">
             {/* <img src={logo.src} alt="logo" className="w-9 h-9 object-contain" /> */}
             <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-              Tng &nbsp;
-              <span className="sm:block hidden"> | JavaScript Developer</span>
+              Maverick Can &nbsp;
+              <span className="sm:block hidden"> | Professional JavaScript Developer</span>
             </p>
           </a>
 

@@ -1,6 +1,6 @@
 {
   "Hero": {
-    "hero1": "Tng is an expert with remarkable experience in developing user interfaces and web applications.",
+    "hero1": "Maverick Can is an expert with remarkable experience in developing user interfaces and web applications.",
     "hero2": "He also offers coaching services to help others develop skills.",
     "hero3": "The combination of expertise and guidance makes him an ideal choice for development projects"
   },
@@ -8,6 +8,8 @@
     "What I have done so far": "What I have done so far",
     "workExperience": "Work Experience",
     "introduction": "Introduction",
+    "Real Estate Listings": "Real Estate Listings",
+    "Real Estate Listings Description": "Real Estate Listings source from Thien Khoi Group",
     "overview": "Overview",
     "myWork": "My Work",
     "projects": "Projects.",
@@ -19,7 +21,8 @@
   "navLinks": {
     "about": "About",
     "work": "Work",
-    "contact": "Contact"
+    "contact": "Contact",
+    "Real Estate Listings": "Real Estate Listings"
   },
   "Index": {
     "overview": "I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!",

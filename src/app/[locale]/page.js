@@ -11,6 +11,7 @@ import {
   Tech,
   Works,
   StarsCanvas,
+  RealEstateListings,
 } from "../HomePage/index";
 
 function Home() {
@@ -25,6 +26,7 @@ function Home() {
       <Tech />
       <Works />
       <Feedbacks />
+      <RealEstateListings />
       <div className="relative z-0">
         <Contact />
         <StarsCanvas />
