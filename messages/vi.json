@@ -73,6 +73,7 @@
     "unity_3d_games_description": "Một ứng dụng Web cho phép người dùng quản lý các đội bóng yêu thích của họ, các giải đấu, xem trận đấu trực tiếp, trò chuyện trong phòng trận đấu",
 
     "okchoi_sport_live_description": "Một ứng dụng Web cho phép người dùng quản lý các đội bóng yêu thích của họ, các giải đấu, xem trận đấu trực tiếp, trò chuyện trong phòng trận đấu",
+    "flashscore_sport_news_description": "Một ứng dụng Web cho phép người dùng đọc tin thể thao, xem trận đấu trực tiếp, đọc thống kê trận đấu,...",
     "whatIHaveDoneSoFar": "Những gì tôi đã làm cho đến nay",
     "workExperience": "Kinh nghiệm làm việc",
     "getInTouch": "Liên hệ",
@@ -86,6 +87,7 @@
     "sending": "Đang gửi...",
     "send": "Gửi",
     "thankYouMessage": "Cảm ơn bạn. Tôi sẽ liên lạc lại với bạn sớm nhất có thể.",
-    "errorMessage": "Ôi, có gì đó sai. Vui lòng thử lại."
+    "errorMessage": "Ôi, có gì đó sai. Vui lòng thử lại.",
+    "pleaseCompleteForm": "Vui lòng hoàn thành biểu mẫu"
   }
 }

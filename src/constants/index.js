@@ -1,44 +1,38 @@
+import { useTranslations } from "next-intl";
 import {
-  mobile,
   backend,
+  challengr,
   creator,
-  web,
-  javascript,
-  typescript,
-  html,
+  csharp,
   css,
+  docker,
+  figma,
+  fpsunity,
+  fpt,
+  git,
+  golang,
+  flashscore,
+  html,
+  javascript,
+  laravel,
+  mobifone,
+  mobile,
+  mongodb,
+  navisoft,
+  nodejs,
+  okchoi,
+  okvip,
+  php,
   reactjs,
   redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
-  mobifone,
-  dft,
-  fpt,
-  vitex,
-  navisoft,
-  vccorp,
-  okvip,
-  okchoi,
   supercore,
-  challengr,
-  fpsunity,
-  csharp,
-  php,
-  laravel,
+  tailwind,
+  threejs,
+  typescript,
+  vccorp,
+  vitex,
+  web,
 } from "../assets";
-import { useTranslations } from "next-intl";
 
 const useNavLinks = () => {
   const t = useTranslations("navLinks");
@@ -107,6 +101,10 @@ const useConstants = () => {
       {
         name: "Php",
         icon: php,
+      },
+      {
+        name: "Golang",
+        icon: golang,
       },
       {
         name: "TypeScript",
@@ -351,8 +349,34 @@ const useConstants = () => {
         source_code_link: "https://github.com/",
         web_link: "https://dev.banhgio88.com/",
       },
+      {
+        name: "Flashscore - Sport news",
+        description: t("flashscore_sport_news_description"),
+        tags: [
+          {
+            name: "bootstrap",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "angular 2",
+            color: "pink-text-gradient",
+          },
+          {
+            name: "c#",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "mongodb",
+            color: "pink-text-gradient",
+          },
+        ],
+        image: flashscore,
+        source_code_link: "https://github.com/",
+        web_link: "https://www.flashscore.com/",
+      },
     ],
   };
 };
 
 export { useConstants };
+

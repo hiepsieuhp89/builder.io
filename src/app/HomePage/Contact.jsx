@@ -32,6 +32,12 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    if (!form.email || !form.message) {
+      alert(t("pleaseCompleteForm"));
+      return;
+    }
+    
     setLoading(true);
     
     emailjs

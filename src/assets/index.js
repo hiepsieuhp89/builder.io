@@ -8,6 +8,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import php from "./tech/php.png";
+import golang from "./tech/golang.png";
 import laravel from "./tech/laravel.png";
 import csharp from "./tech/csharp.png";
 
@@ -44,11 +45,14 @@ import okchoi from "./okchoi.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import flashscore from "./flashscore.png";
 
 export {
   php,
   laravel,
+  flashscore,
   csharp,
+  golang,
   fpsunity,
   supercore,
   challengr,

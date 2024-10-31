@@ -73,6 +73,7 @@
     "unity_3d_games_description": "A Web app allows users to manage their favorite football teams, leagues, watch live match, chating in match room",
 
     "okchoi_sport_live_description": "A Web app allows users to manage their favorite football teams, leagues, watch live match, chating in match room",
+    "flashscore_sport_news_description": "A Web app allows users to read sport news, watch live match, read match statistics,...",
     "whatIHaveDoneSoFar": "What I have done so far",
     "workExperience": "Work Experience",
     "getInTouch": "Get in touch",
@@ -86,6 +87,7 @@
     "sending": "Sending...",
     "send": "Send",
     "thankYouMessage": "Thank you. I will get back to you as soon as possible.",
-    "errorMessage": "Ahh, something went wrong. Please try again."
+    "errorMessage": "Ahh, something went wrong. Please try again.",
+    "pleaseCompleteForm": "Please complete the form"
   }
 }
