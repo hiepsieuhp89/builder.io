@@ -21,7 +21,7 @@ const LangSwitcher = (_props) => {
   };
 
   const handleLangSwitcheruage = () => {
-    const nextLocale = locale == "vi" ? "en" : "vi";
+    const nextLocale = locale == "en" ? "kr" : "en";
 
     startTransition(() => {
       router.replace(
@@ -29,7 +29,7 @@ const LangSwitcher = (_props) => {
         // are used in combination with a given `pathname`. Since the two will
         // always match for the current route, we can skip runtime checks.
         { pathname, params },
-        { locale: nextLocale },
+        { locale: nextLocale }
       );
     });
   };
@@ -37,12 +37,12 @@ const LangSwitcher = (_props) => {
     <div>
       <div
         className="switch"
-        data-isOn={locale == "vi"}
+        data-isOn={locale == "en"}
         onClick={handleLangSwitcheruage}
       >
         <motion.div className="handle" layout transition={spring}>
-          {locale == "vi" ? (
-            <img src="./vietnam.256x256.png" />
+          {locale == "kr" ? (
+            <img src="./south-korea.256x256.png" />
           ) : (
             <img src="./united-states.256x256.png" />
           )}
