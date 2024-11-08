@@ -218,19 +218,19 @@ const useConstants = () => {
           t("develop_cms_api"),
         ],
       },
-      {
-        title: t("fullstack_developer"),
-        company_name: "Vitex",
-        icon: vitex,
-        iconBg: "#E6DEDD",
-        date: t("mar_2024_now"),
-        points: [
-          t("develop_and_build_web_apps"),
-          t("collaborating_with_cross_functional_teams"),
-          t("implementing_responsive_design"),
-          t("develop_app_components"),
-        ],
-      },
+      // {
+      //   title: t("fullstack_developer"),
+      //   company_name: "Vitex",
+      //   icon: vitex,
+      //   iconBg: "#E6DEDD",
+      //   date: t("mar_2024_now"),
+      //   points: [
+      //     t("develop_and_build_web_apps"),
+      //     t("collaborating_with_cross_functional_teams"),
+      //     t("implementing_responsive_design"),
+      //     t("develop_app_components"),
+      //   ],
+      // },
     ],
 
     testimonials: [
