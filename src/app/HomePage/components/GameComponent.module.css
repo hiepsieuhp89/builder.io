@@ -1,0 +1,38 @@
+.gameContainer {
+  aspect-ratio: 9/19;
+  border: 2px solid #ffd700;
+  background-color: #2d2d0d;
+}
+
+.gameArea {
+  background-color: #2d2d0d;
+  height: calc(100% - 160px);
+  position: relative;
+  cursor: pointer;
+}
+
+.character {
+  border-radius: 2px;
+}
+
+.statsBar {
+  display: flex;
+  justify-content: space-between;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.bottomNav {
+  position: absolute;
+  bottom: 1rem;
+  left: 0.5rem;
+  right: 0.5rem;
+}
+
+.bottomButtons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0;
+  border-top: 1px solid #ffd700;
+} 
