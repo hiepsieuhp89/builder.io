@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { useConstants } from "../../constants";
 import { styles } from "../../styles";
 import LangSwitcher from "./components/LangSwitcher";
@@ -14,6 +14,7 @@ const Navbar = () => {
   const { scrollYProgress } = useScroll();
   const [counter, setCounter] = useState(0);
   const constant = useConstants();
+  const [showCVPopup, setShowCVPopup] = useState(false);
   //mobile
   // const [isOpen, toggleOpen] = useCycle(false, true);
   // const containerRef = useRef(null);
@@ -66,7 +67,15 @@ const Navbar = () => {
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
                 onClick={() => setActive(nav.title)}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <a 
+                  href={nav.id === "cv" 
+                    ? "https://www.topcv.vn/xem-cv/AlEDAQdUUQBQV1ZRUlFdVVMDAgYMAFdVAVZVXA6c55" 
+                    : `#${nav.id}`}
+                  target={nav.id === "cv" ? "_blank" : "_self"}
+                  rel={nav.id === "cv" ? "noopener noreferrer" : ""}
+                >
+                  {nav.title}
+                </a>
               </li>
             ))}
             <LangSwitcher />
@@ -85,6 +94,52 @@ const Navbar = () => {
         <Navigation />
         <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav> */}
+      <AnimatePresence>
+        {showCVPopup && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+            onClick={() => setShowCVPopup(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.5 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.5 }}
+              className="bg-white rounded-lg p-6 w-full max-w-md text-center relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setShowCVPopup(false)}
+                className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+              >
+                ✕
+              </button>
+              <h2 className="text-xl font-bold mb-4">View My CV</h2>
+              <p className="mb-6">Choose how you&apos;d like to view my CV:</p>
+              <div className="space-y-4">
+                <a
+                  href="https://www.topcv.vn/xem-cv/AlEDAQdUUQBQV1ZRUlFdVVMDAgYMAFdVAVZVXA6c55"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors"
+                >
+                  Open in New Tab
+                </a>
+                {/* Add download link if you have a PDF version */}
+                <a
+                  href="/path-to-your-cv.pdf"
+                  download
+                  className="block w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition-colors"
+                >
+                  Download PDF
+                </a>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </React.Fragment>
   );
 };

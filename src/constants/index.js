@@ -50,6 +50,10 @@ const useNavLinks = () => {
       title: t("Real Estate Listings"),
     },
     {
+      id: "cv",
+      title: "CV",
+    },
+    {
       id: "contact",
       title: t("contact"),
     },
