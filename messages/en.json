@@ -36,6 +36,8 @@
     "may_2021_december_2022": "May 2021 - December 2022",
     "may_2022_nov_2023": "May 2022 - Nov 2023",
     "nov_2023_mar_2024": "Nov 2023 - Mar 2024",
+    "dec_2023_august_2024": "December 2023 - August 2024",
+    "august_2024_present": "August 2024 - Present",
     "mar_2024_now": "Mar 2024 - Now",
     "develop_web_application": "Develop web application, build app structure by admin panel framework Laravel Admin",
     "collaborating_with_cross_functional_teams": "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -74,6 +76,9 @@
 
     "okchoi_sport_live_description": "A Web app allows users to manage their favorite football teams, leagues, watch live match, chating in match room",
     "flashscore_sport_news_description": "A Web app allows users to read sport news, watch live match, read match statistics,...",
+    "stoned_ape_crew_description": "A Web3 NFT project on Solana blockchain featuring a collection of 4200 unique Stoned Apes with different roles and traits, including staking, token earning ($PUFF), and evolution systems",
+    "del_qui_description": "A business platform that accelerates startups and new product development with agile methodologies and BaaS (Backend as a Service) solutions, focusing on lean prototyping and market validation",
+    "kosenoba_description": "A web development service offering responsive, modern web design with custom solutions for various business needs and industries",
     "whatIHaveDoneSoFar": "What I have done so far",
     "workExperience": "Work Experience",
     "getInTouch": "Get in touch",

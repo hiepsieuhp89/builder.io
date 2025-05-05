@@ -5,15 +5,18 @@ import {
   creator,
   csharp,
   css,
+  delqui,
+  delqui_pj,
   docker,
   figma,
+  flashscore,
   fpsunity,
   fpt,
   git,
   golang,
-  flashscore,
   html,
   javascript,
+  kosenoba,
   laravel,
   mobifone,
   mobile,
@@ -21,17 +24,16 @@ import {
   navisoft,
   nodejs,
   okchoi,
-  okvip,
   php,
   reactjs,
   redux,
+  stonedapecrew,
   supercore,
   tailwind,
   threejs,
   typescript,
   vccorp,
-  vitex,
-  web,
+  web
 } from "../assets";
 
 const useNavLinks = () => {
@@ -201,7 +203,7 @@ const useConstants = () => {
         company_name: "VCCorp",
         icon: vccorp,
         iconBg: "#E6DEDD",
-        date: t("nov_2023_mar_2024"),
+        date: t("dec_2023_august_2024"),
         points: [
           t("develop_ims_site_editor"),
           t("collaborating_with_cross_functional_teams"),
@@ -210,16 +212,16 @@ const useConstants = () => {
         ],
       },
       {
-        title: t("backend_developer"),
-        company_name: "Okvip",
-        icon: okvip,
-        iconBg: "#E6DEDD",
-        date: t("nov_2023_mar_2024"),
+        title: t("fullstack_developer"),
+        company_name: "Del Qui",
+        icon: delqui,
+        iconBg: "#383E56",
+        date: t("august_2024_present"),
         points: [
-          t("develop_and_build_authentications"),
+          t("develop_and_build_web_apps"),
           t("collaborating_with_cross_functional_teams"),
           t("implementing_responsive_design"),
-          t("develop_cms_api"),
+          t("develop_app_components"),
         ],
       },
       // {
@@ -377,6 +379,81 @@ const useConstants = () => {
         image: flashscore,
         source_code_link: "https://github.com/",
         web_link: "https://www.flashscore.com/",
+      },
+      {
+        name: "Stoned Ape Crew",
+        description: t("stoned_ape_crew_description"),
+        tags: [
+          {
+            name: "react",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "solana",
+            color: "green-text-gradient",
+          },
+          {
+            name: "typescript",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "web3",
+            color: "pink-text-gradient",
+          },
+        ],
+        image: stonedapecrew,
+        source_code_link: "https://github.com/",
+        web_link: "https://www.stonedapecrew.com/",
+      },
+      {
+        name: "Del Qui - Business Platform",
+        description: t("del_qui_description"),
+        tags: [
+          {
+            name: "next.js",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "typescript",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "tailwindcss",
+            color: "pink-text-gradient",
+          },
+          {
+            name: "baas",
+            color: "green-text-gradient",
+          },
+        ],
+        image: delqui_pj,
+        source_code_link: "https://github.com/",
+        web_link: "https://del-qui.com/",
+      },
+      {
+        name: "Kosenoba - Web Development",
+        description: t("kosenoba_description"),
+        tags: [
+          {
+            name: "react",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "javascript",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "css",
+            color: "pink-text-gradient",
+          },
+          {
+            name: "responsive",
+            color: "green-text-gradient",
+          },
+        ],
+        image: kosenoba,
+        source_code_link: "https://github.com/",
+        web_link: "https://www.kosenoba.com/web",
       },
     ],
   };

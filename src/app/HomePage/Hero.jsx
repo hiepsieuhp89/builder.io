@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-
-import { styles } from "../../styles";
-import { ComputersCanvas, LaptopCanvas } from "./canvas";
+import TextParticle from "./components/TextParticle";
 import { useTranslations } from "next-intl";
+import { styles } from "../../styles";
+import { LaptopCanvas } from "./canvas";
 
 const Hero = () => {
   const t = useTranslations("Hero");
@@ -17,9 +17,12 @@ const Hero = () => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I&apos;m <span className="text-[#d46745]">Maverick Can </span>
-          </h1>
+          <div className="flex">
+            <h1 className={`${styles.heroHeadText} text-white`}>
+              Hi, I&apos;m
+            </h1>
+            {/* <TextParticle text="Maverick Can" /> */}
+          </div>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             {t("hero1")}
             <br className="sm:block hidden" />

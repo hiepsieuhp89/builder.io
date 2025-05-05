@@ -16,7 +16,7 @@ const RealEstateListings = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>{t("Real Estate Listings")}</p>
-        <a target="_blank" className="underline" href="https://housing.xuntun.site/">
+        <a target="_blank" className="underline" href="https://maverick.io.vn">
           <h2 className={styles.sectionHeadText}>
             {t("Real Estate Listings Description")}.
           </h2>

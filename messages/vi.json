@@ -36,6 +36,8 @@
     "may_2021_december_2022": "Tháng 5 2021 - Tháng 12 2022",
     "may_2022_nov_2023": "Tháng 5 2022 - Tháng 11 2023",
     "nov_2023_mar_2024": "Tháng 11 2023 - Tháng 3 2024",
+    "dec_2023_august_2024": "Tháng 12 2023 - Tháng 8 2024",
+    "august_2024_present": "Tháng 8 2024 - Hiện tại",
     "mar_2024_now": "Tháng 3 2024 - Hiện tại",
     "develop_web_application": "Phát triển ứng dụng web, xây dựng cấu trúc ứng dụng bằng khung quản trị Laravel Admin",
     "collaborating_with_cross_functional_teams": "Hợp tác với các nhóm chức năng chéo bao gồm nhà thiết kế, quản lý sản phẩm và các nhà phát triển khác để tạo ra các sản phẩm chất lượng cao.",
@@ -74,6 +76,9 @@
 
     "okchoi_sport_live_description": "Một ứng dụng Web cho phép người dùng quản lý các đội bóng yêu thích của họ, các giải đấu, xem trận đấu trực tiếp, trò chuyện trong phòng trận đấu",
     "flashscore_sport_news_description": "Một ứng dụng Web cho phép người dùng đọc tin thể thao, xem trận đấu trực tiếp, đọc thống kê trận đấu,...",
+    "stoned_ape_crew_description": "Một dự án NFT Web3 trên blockchain Solana với bộ sưu tập 4200 Stoned Apes độc đáo với các vai trò và đặc điểm khác nhau, bao gồm staking, kiếm token ($PUFF) và hệ thống tiến hóa",
+    "del_qui_description": "Một nền tảng kinh doanh giúp đẩy nhanh các startup và phát triển sản phẩm mới với phương pháp agile và giải pháp BaaS (Backend as a Service), tập trung vào tạo mẫu tinh gọn và xác thực thị trường",
+    "kosenoba_description": "Một dịch vụ phát triển web cung cấp thiết kế web hiện đại, đáp ứng với các giải pháp tùy chỉnh cho các nhu cầu và ngành kinh doanh khác nhau",
     "whatIHaveDoneSoFar": "Những gì tôi đã làm cho đến nay",
     "workExperience": "Kinh nghiệm làm việc",
     "getInTouch": "Liên hệ",

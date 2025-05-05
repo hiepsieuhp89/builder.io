@@ -37,6 +37,7 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import delqui from "./company/delqui.png";
 
 import fpsunity from "./fpsunity.png";
 import supercore from "./supercore.png";
@@ -46,6 +47,9 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import flashscore from "./flashscore.png";
+import stonedapecrew from "./stonedapecrew.png";
+import kosenoba from "./kosenoba.png";
+import delqui_pj from "./delqui_pj.png";
 
 export {
   php,
@@ -92,4 +96,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  delqui,
+  stonedapecrew,
+  kosenoba,
+  delqui_pj,
 };
