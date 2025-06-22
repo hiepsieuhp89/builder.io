@@ -1,12 +1,10 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl"; // Import the useTranslations hook
 
-import { styles } from "../../styles";
-import { SectionWrapper } from "../../hoc";
-import { fadeIn, textVariant } from "../../utils/motion";
 import { useConstants } from "../../constants";
-import Image from "next/image";
+import { SectionWrapper } from "../../hoc";
+import { styles } from "../../styles";
+import { fadeIn, textVariant } from "../../utils/motion";
 
 const FeedbackCard = ({
   index,

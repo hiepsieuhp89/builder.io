@@ -14,6 +14,12 @@ module.exports = withNextIntl({
       fs: false, // the solution
     };
 
+    // Add support for binary files and GLTF files
+    config.module.rules.push({
+      test: /\.(bin|gltf)$/,
+      type: "asset/resource",
+    });
+
     return config;
   },
   images: {

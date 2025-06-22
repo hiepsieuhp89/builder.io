@@ -1,40 +1,4 @@
 import { useTranslations } from "next-intl";
-import {
-  backend,
-  challengr,
-  creator,
-  csharp,
-  css,
-  delqui,
-  delqui_pj,
-  docker,
-  figma,
-  flashscore,
-  fpsunity,
-  fpt,
-  git,
-  golang,
-  html,
-  javascript,
-  kosenoba,
-  laravel,
-  mobifone,
-  mobile,
-  mongodb,
-  navisoft,
-  nodejs,
-  okchoi,
-  php,
-  reactjs,
-  redux,
-  stonedapecrew,
-  supercore,
-  tailwind,
-  threejs,
-  typescript,
-  vccorp,
-  web
-} from "../assets";
 
 const useNavLinks = () => {
   const t = useTranslations("navLinks");
@@ -47,10 +11,10 @@ const useNavLinks = () => {
       id: "work",
       title: t("work"),
     },
-    {
-      id: "listings",
-      title: t("Real Estate Listings"),
-    },
+    // {
+    //   id: "listings",
+    //   title: t("Real Estate Listings"),
+    // },
     {
       id: "cv",
       title: "CV",
@@ -71,100 +35,100 @@ const useConstants = () => {
     services: [
       {
         title: t("web_developer"),
-        icon: web,
+        icon: "/icons/web.png",
       },
       {
         title: t("react_next_developer"),
-        icon: mobile,
+        icon: "/icons/mobile.png",
       },
       {
         title: t("backend_developer"),
-        icon: backend,
+        icon: "/icons/backend.png",
       },
       {
         title: t("model_designer"),
-        icon: creator,
+        icon: "/icons/creator.png",
       },
     ],
 
     technologies: [
       {
         name: "HTML 5",
-        icon: html,
+        icon: "/icons/html.png",
       },
       {
         name: "CSS 3",
-        icon: css,
+        icon: "/icons/css.png",
       },
       {
         name: "JavaScript",
-        icon: javascript,
+        icon: "/icons/javascript.png",
       },
       {
         name: "C#",
-        icon: csharp,
+        icon: "/icons/csharp.png",
       },
       {
         name: "Php",
-        icon: php,
+        icon: "/icons/php.png",
       },
       {
         name: "Golang",
-        icon: golang,
+        icon: "/icons/golang.png",
       },
       {
         name: "TypeScript",
-        icon: typescript,
+        icon: "/icons/typescript.png",
       },
       {
         name: "React",
-        icon: reactjs,
+        icon: "/icons/reactjs.png",
       },
       {
         name: "Redux Toolkit",
-        icon: redux,
+        icon: "/icons/redux.png",
       },
       {
         name: "Tailwind CSS",
-        icon: tailwind,
+        icon: "/icons/tailwind.png",
       },
       {
         name: "Laravel",
-        icon: laravel,
+        icon: "/icons/laravel.png",
       },
       {
         name: "Node JS",
-        icon: nodejs,
+        icon: "/icons/nodejs.png",
       },
       {
         name: "MongoDB",
-        icon: mongodb,
+        icon: "/icons/mongodb.png",
       },
       {
         name: "Three JS",
-        icon: threejs,
+        icon: "/icons/threejs.png",
       },
       {
         name: "git",
-        icon: git,
+        icon: "/icons/git.png",
       },
       {
         name: "figma",
-        icon: figma,
+        icon: "/icons/figma.png",
       },
       {
         name: "docker",
-        icon: docker,
+        icon: "/icons/docker.png",
       },
     ],
 
     experiences: [
       {
-        title: t("web_developer"),
-        company_name: "Haedap JSC/Mobifone",
-        icon: mobifone,
+        title: t("fullstack_developer"),
+        company_name: "Haedap JSC",
+        icon: "/icons/mobifone.png",
         iconBg: "#383E56",
-        date: t("april_2021_april_2022"),
+        date: "April 2019 - March 2022",
         points: [
           t("develop_web_application"),
           t("collaborating_with_cross_functional_teams"),
@@ -175,9 +139,9 @@ const useConstants = () => {
       {
         title: t("backend_developer"),
         company_name: "FPT Software",
-        icon: fpt,
+        icon: "/icons/fpt.png",
         iconBg: "#E6DEDD",
-        date: t("may_2021_december_2022"),
+        date: "October 2020 - April 2021",
         points: [
           t("developing_and_maintaining_web_applications"),
           t("collaborating_with_cross_functional_teams"),
@@ -186,11 +150,11 @@ const useConstants = () => {
         ],
       },
       {
-        title: t("fullstack_developer"),
-        company_name: "NaviSoft",
-        icon: navisoft,
+        title: t("frontend_developer"),
+        company_name: "NaviSoft (Nam Viet Software)",
+        icon: "/icons/navisoft.png",
         iconBg: "#383E56",
-        date: t("may_2022_nov_2023"),
+        date: "April 2021 - October 2022",
         points: [
           t("write_code_and_develop_web_application"),
           t("providing_software_services"),
@@ -199,22 +163,22 @@ const useConstants = () => {
         ],
       },
       {
-        title: t("frontend_developer"),
-        company_name: "VCCorp",
-        icon: vccorp,
+        title: t("fullstack_developer"),
+        company_name: "Binh Minh Group",
+        icon: "/icons/binhminh.png",
         iconBg: "#E6DEDD",
-        date: t("dec_2023_august_2024"),
+        date: "December 2023 - May 2025",
         points: [
-          t("develop_ims_site_editor"),
+          t("develop_and_build_web_apps"),
           t("collaborating_with_cross_functional_teams"),
           t("implementing_responsive_design"),
-          t("build_and_develop_site_editor"),
+          t("develop_app_components"),
         ],
       },
       {
         title: t("fullstack_developer"),
         company_name: "Del Qui",
-        icon: delqui,
+        icon: "/icons/delqui.png",
         iconBg: "#383E56",
         date: t("august_2024_present"),
         points: [
@@ -224,38 +188,25 @@ const useConstants = () => {
           t("develop_app_components"),
         ],
       },
-      // {
-      //   title: t("fullstack_developer"),
-      //   company_name: "Vitex",
-      //   icon: vitex,
-      //   iconBg: "#E6DEDD",
-      //   date: t("mar_2024_now"),
-      //   points: [
-      //     t("develop_and_build_web_apps"),
-      //     t("collaborating_with_cross_functional_teams"),
-      //     t("implementing_responsive_design"),
-      //     t("develop_app_components"),
-      //   ],
-      // },
     ],
 
     testimonials: [
       {
-        testimonial: t("mvp_of_teamwork"),
+        testimonial: t("testimonial_minh"),
         name: "Minh",
         designation: t("designer"),
         company: "NaviSoft",
         image: "https://randomuser.me/api/portraits/women/4.jpg",
       },
       {
-        testimonial: t("lone_wolf_of_productivity"),
+        testimonial: t("testimonial_ha"),
         name: "Ha",
         designation: t("tester"),
         company: "Dft",
         image: "https://randomuser.me/api/portraits/men/5.jpg",
       },
       {
-        testimonial: t("after_hours_hero"),
+        testimonial: t("testimonial_phuong"),
         name: "Phuong",
         designation: t("ba"),
         company: "Navisoft",
@@ -285,7 +236,7 @@ const useConstants = () => {
             color: "green-text-gradient",
           },
         ],
-        image: challengr,
+        image: "/icons/challengr.png",
         source_code_link: "https://github.com/",
         web_link: "https://next-staging.challengr.be/",
       },
@@ -310,7 +261,7 @@ const useConstants = () => {
             color: "green-text-gradient",
           },
         ],
-        image: supercore,
+        image: "/icons/supercore.png",
         source_code_link: "https://github.com/",
         web_link: "https://iboard.ssi.com.vn/",
       },
@@ -331,29 +282,8 @@ const useConstants = () => {
             color: "pink-text-gradient",
           },
         ],
-        image: fpsunity,
+        image: "/icons/fpsunity.png",
         source_code_link: "https://github.com/",
-      },
-      {
-        name: "OkChoi - Sport Live",
-        description: t("okchoi_sport_live_description"),
-        tags: [
-          {
-            name: "reactjs",
-            color: "blue-text-gradient",
-          },
-          {
-            name: "c#",
-            color: "blue-text-gradient",
-          },
-          {
-            name: "css",
-            color: "pink-text-gradient",
-          },
-        ],
-        image: okchoi,
-        source_code_link: "https://github.com/",
-        web_link: "https://dev.banhgio88.com/",
       },
       {
         name: "Flashscore - Sport news",
@@ -376,7 +306,7 @@ const useConstants = () => {
             color: "pink-text-gradient",
           },
         ],
-        image: flashscore,
+        image: "/icons/flashscore.png",
         source_code_link: "https://github.com/",
         web_link: "https://www.flashscore.com/",
       },
@@ -401,7 +331,7 @@ const useConstants = () => {
             color: "pink-text-gradient",
           },
         ],
-        image: stonedapecrew,
+        image: "/icons/stonedapecrew.png",
         source_code_link: "https://github.com/",
         web_link: "https://www.stonedapecrew.com/",
       },
@@ -426,7 +356,7 @@ const useConstants = () => {
             color: "green-text-gradient",
           },
         ],
-        image: delqui_pj,
+        image: "/icons/delqui_pj.png",
         source_code_link: "https://github.com/",
         web_link: "https://del-qui.com/",
       },
@@ -451,7 +381,7 @@ const useConstants = () => {
             color: "green-text-gradient",
           },
         ],
-        image: kosenoba,
+        image: "/icons/kosenoba.png",
         source_code_link: "https://github.com/",
         web_link: "https://www.kosenoba.com/web",
       },

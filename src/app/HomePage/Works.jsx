@@ -39,7 +39,7 @@ const ProjectCard = ({
           className="relative w-full h-[230px] cursor-pointer"
         >
           <Image
-            src={image.src}
+            src={image}
             alt="project_image"
             layout="fill"
             objectFit="cover"
@@ -88,9 +88,9 @@ const ProjectCard = ({
 const Works = () => {
   const t = useTranslations("Index");
 
+  console.log("useConstants().projects", useConstants().projects)
   return (
     <>
-    {console.log(t)}
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>{t('my_work')}</p>
         <h2 className={`${styles.sectionHeadText}`}>{t('projects')}</h2>

@@ -54,7 +54,10 @@ const Navbar = () => {
             {/* <img src={logo.src} alt="logo" className="w-9 h-9 object-contain" /> */}
             <p className="text-white text-[18px] font-bold cursor-pointer flex ">
               Maverick Can &nbsp;
-              <span className="sm:block hidden"> | Professional JavaScript Developer</span>
+              <span className="sm:block hidden">
+                {" "}
+                | Professional JavaScript Developer
+              </span>
             </p>
           </a>
 
@@ -67,10 +70,12 @@ const Navbar = () => {
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
                 onClick={() => setActive(nav.title)}
               >
-                <a 
-                  href={nav.id === "cv" 
-                    ? "https://www.topcv.vn/xem-cv/AlEDAQdUUQBQV1ZRUlFdVVMDAgYMAFdVAVZVXA6c55" 
-                    : `#${nav.id}`}
+                <a
+                  href={
+                    nav.id === "cv"
+                      ? "https://www.topcv.vn/xem-cv/AlBQAgBTUF1dBlJUVFBSDwYLBgcDVQlQAVAGBQ90df"
+                      : `#${nav.id}`
+                  }
                   target={nav.id === "cv" ? "_blank" : "_self"}
                   rel={nav.id === "cv" ? "noopener noreferrer" : ""}
                 >
@@ -120,7 +125,7 @@ const Navbar = () => {
               <p className="mb-6">Choose how you&apos;d like to view my CV:</p>
               <div className="space-y-4">
                 <a
-                  href="https://www.topcv.vn/xem-cv/AlEDAQdUUQBQV1ZRUlFdVVMDAgYMAFdVAVZVXA6c55"
+                  href="https://www.topcv.vn/xem-cv/AlBQAgBTUF1dBlJUVFBSDwYLBgcDVQlQAVAGBQ90df"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors"

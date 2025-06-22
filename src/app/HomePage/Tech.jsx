@@ -33,7 +33,7 @@ const Tech = () => {
               },
             }}
           >
-            <img src={technology.icon.src} alt="" />
+            <img src={technology.icon} alt="" />
           </motion.div>
         </motion.div>
       ))}
