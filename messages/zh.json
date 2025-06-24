@@ -93,6 +93,13 @@
     "send": "发送",
     "thankYouMessage": "谢谢您。我会尽快回复您。",
     "errorMessage": "出了些问题。请再试一次。",
-    "pleaseCompleteForm": "请完成表格"
+    "pleaseCompleteForm": "请完成表格",
+    "validation_name_min": "姓名至少需要2个字符",
+    "validation_name_max": "姓名必须少于50个字符",
+    "validation_email_invalid": "请输入有效的邮箱地址",
+    "validation_message_min": "消息至少需要10个字符",
+    "validation_message_max": "消息必须少于1000个字符",
+    "validation_fix_errors": "提交前请修复错误",
+    "sending_message": "正在发送您的消息..."
   }
 } 

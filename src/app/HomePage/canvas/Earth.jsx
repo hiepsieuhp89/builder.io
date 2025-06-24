@@ -1,85 +1,122 @@
 "use client";
-import { OrbitControls, Preload, Trail, useGLTF } from "@react-three/drei";
+import {
+  Line,
+  OrbitControls,
+  Preload,
+  Trail,
+  useGLTF,
+} from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Suspense, useRef } from "react";
+import { Suspense, useRef, useState, useEffect } from "react";
 import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
 
 const Earth = () => {
-  try {
-    // Try loading the GLTF first
-    const earth = useGLTF("./planet/scene.gltf");
-    return (
-      <group>
-        {/* <Line worldUnits points={points} color="turquoise" lineWidth={0.3} />
-        <Line
-          worldUnits
-          points={points}
-          color="turquoise"
-          lineWidth={0.3}
-          rotation={[0, 0, 1]}
-        />
-        <Line
-          worldUnits
-          points={points}
-          color="turquoise"
-          lineWidth={0.3}
-          rotation={[0, 0, -1]}
-        />
-        <Electron position={[0, 0, 0.5]} speed={6} />
-        <Electron
-          position={[0, 0, 0.5]}
-          rotation={[0, 0, Math.PI / 3]}
-          speed={6.5}
-        />
-        <Electron
-          position={[0, 0, 0.5]}
-          rotation={[0, 0, -Math.PI / 3]}
-          speed={7}
-        /> */}
-        <primitive
-          object={earth.scene}
-          scale={2.5}
-          position-y={0}
-          rotation-y={0}
-        />
-      </group>
-    );
-  } catch (error) {
-    console.error("Error loading Earth GLTF model:", error);
-    // Fallback to a simple Earth-like sphere
-    return <EarthFallback />;
-  }
-};
-
-// Fallback Earth component with simple geometry
-const EarthFallback = () => {
   const meshRef = useRef();
-  
+
+  // Call useGLTF at the top level - it handles loading states internally
+  const earth = useGLTF("./planet/scene.gltf");
+
+  // Always call useFrame at the top level
   useFrame((state) => {
-    if (meshRef.current) {
+    if (earth?.scene) {
+      earth.scene.rotation.y = state.clock.getElapsedTime() * 0.1;
+    } else if (meshRef.current) {
       meshRef.current.rotation.y = state.clock.getElapsedTime() * 0.1;
     }
   });
 
+  // If earth model is not loaded yet or has issues, show fallback
+  if (!earth?.scene) {
+    return <EarthFallback meshRef={meshRef} />;
+  }
+
   return (
     <group>
+      {/* <Line worldUnits points={points} color="turquoise" lineWidth={0.3} />
+      <Line
+        worldUnits
+        points={points}
+        color="turquoise"
+        lineWidth={0.3}
+        rotation={[0, 0, 1]}
+      />
+      <Line
+        worldUnits
+        points={points}
+        color="turquoise"
+        lineWidth={0.3}
+        rotation={[0, 0, -1]}
+      />
+      <Electron position={[0, 0, 0.5]} speed={6} />
+      <Electron
+        position={[0, 0, 0.5]}
+        rotation={[0, 0, Math.PI / 3]}
+        speed={6.5}
+      />
+      <Electron
+        position={[0, 0, 0.5]}
+        rotation={[0, 0, -Math.PI / 3]}
+        speed={7}
+      /> */}
+      <primitive
+        ref={meshRef}
+        object={earth.scene}
+        scale={2.5}
+        position-y={0}
+        rotation-y={0}
+      />
+    </group>
+  );
+};
+
+// Improved Fallback Earth component with better textures
+const EarthFallback = ({ meshRef }) => {
+  return (
+    <group>
+      {/* Main Earth sphere - blue oceans */}
       <mesh ref={meshRef}>
         <sphereGeometry args={[2.5, 64, 64]} />
-        <meshStandardMaterial 
-          color="#4ade80"
-          roughness={0.8}
-          metalness={0.2}
+        <meshStandardMaterial
+          color="#0369a1" // Ocean blue
+          roughness={0.6}
+          metalness={0.1}
+          emissive="#0c1445"
+          emissiveIntensity={0.05}
         />
       </mesh>
-      {/* Add some atmosphere effect */}
+
+      {/* Continents layer */}
+      <mesh>
+        <sphereGeometry args={[2.51, 32, 32]} />
+        <meshStandardMaterial
+          color="#8b5a3c" // Brown/earth color for continents
+          transparent
+          opacity={0.7}
+          roughness={0.9}
+          metalness={0.0}
+        />
+      </mesh>
+
+      {/* Green vegetation layer */}
+      <mesh>
+        <sphereGeometry args={[2.515, 16, 16]} />
+        <meshStandardMaterial
+          color="#166534" // Forest green
+          transparent
+          opacity={0.4}
+          roughness={0.95}
+        />
+      </mesh>
+
+      {/* Atmosphere effect */}
       <mesh>
         <sphereGeometry args={[2.7, 32, 32]} />
-        <meshBasicMaterial 
-          color="#87ceeb" 
-          transparent 
-          opacity={0.1}
+        <meshBasicMaterial
+          color="#87ceeb" // Sky blue
+          transparent
+          opacity={0.15}
         />
       </mesh>
     </group>
@@ -133,7 +170,7 @@ const EarthCanvas = () => {
         <ambientLight intensity={0.15} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
         <pointLight position={[-10, -10, -10]} intensity={0.5} />
-        
+
         <OrbitControls
           autoRotate
           enableZoom={false}

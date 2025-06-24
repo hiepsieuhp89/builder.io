@@ -93,6 +93,13 @@
     "send": "送信",
     "thankYouMessage": "ありがとうございます。できるだけ早くご連絡いたします。",
     "errorMessage": "エラーが発生しました。もう一度お試しください。",
-    "pleaseCompleteForm": "フォームに記入してください"
+    "pleaseCompleteForm": "フォームに記入してください",
+    "validation_name_min": "名前は2文字以上で入力してください",
+    "validation_name_max": "名前は50文字以内で入力してください",
+    "validation_email_invalid": "有効なメールアドレスを入力してください",
+    "validation_message_min": "メッセージは10文字以上で入力してください",
+    "validation_message_max": "メッセージは1000文字以内で入力してください",
+    "validation_fix_errors": "送信前にエラーを修正してください",
+    "sending_message": "メッセージを送信中..."
   }
 } 

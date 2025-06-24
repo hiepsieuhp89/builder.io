@@ -96,6 +96,13 @@
     "send": "Gửi",
     "thankYouMessage": "Cảm ơn bạn. Tôi sẽ liên lạc lại với bạn sớm nhất có thể.",
     "errorMessage": "Ôi, có gì đó sai. Vui lòng thử lại.",
-    "pleaseCompleteForm": "Vui lòng hoàn thành biểu mẫu"
+    "pleaseCompleteForm": "Vui lòng hoàn thành biểu mẫu",
+    "validation_name_min": "Tên phải có ít nhất 2 ký tự",
+    "validation_name_max": "Tên phải ít hơn 50 ký tự",
+    "validation_email_invalid": "Vui lòng nhập địa chỉ email hợp lệ",
+    "validation_message_min": "Tin nhắn phải có ít nhất 10 ký tự",
+    "validation_message_max": "Tin nhắn phải ít hơn 1000 ký tự",
+    "validation_fix_errors": "Vui lòng sửa lỗi trước khi gửi",
+    "sending_message": "Đang gửi tin nhắn của bạn..."
   }
 }
