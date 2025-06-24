@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { z } from "zod";
 import toast, { Toaster } from "react-hot-toast";
 import { createPortal } from "react-dom";
@@ -124,7 +123,7 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateForm()) {
@@ -137,45 +136,47 @@ const Contact = () => {
     // Show loading toast
     const loadingToast = toast.loading(t("sending_message"));
 
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_APP_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "XunTun",
-          from_email: form.email,
-          to_email: "cxtdev2000@gmail.com",
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
           message: form.message,
-        },
-        process.env.NEXT_PUBLIC_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          toast.dismiss(loadingToast);
-          toast.success(t("thankYouMessage"), {
-            duration: 5000,
-            icon: "🎉",
-          });
+        }),
+      });
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-          setErrors({});
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-          toast.dismiss(loadingToast);
-          toast.error(t("errorMessage"), {
-            duration: 5000,
-            icon: "❌",
-          });
-        }
-      );
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setLoading(false);
+        toast.dismiss(loadingToast);
+        toast.success(t("thankYouMessage"), {
+          duration: 5000,
+          icon: "🎉",
+        });
+
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+        setErrors({});
+      } else {
+        throw new Error(data.error || 'Failed to send email');
+      }
+    } catch (error) {
+      setLoading(false);
+      console.error('Email sending error:', error);
+      toast.dismiss(loadingToast);
+      toast.error(error.message || t("errorMessage"), {
+        duration: 5000,
+        icon: "❌",
+      });
+    }
   };
 
   return (
