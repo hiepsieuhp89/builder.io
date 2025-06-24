@@ -137,7 +137,11 @@ const Contact = () => {
     const loadingToast = toast.loading(t("sending_message"));
 
     try {
-      const response = await fetch('/api/send-email', {
+      // Get base URL without locale path
+      const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
+      
+      // API routes are not localized, so we call them directly without locale prefix
+      const response = await fetch(`${baseUrl}/api/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
